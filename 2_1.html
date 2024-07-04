@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>     
+<body>
+    <div id="result"></div>
+    <script>
+        document.addEventListener
+        ("DOMContentLoaded",function()
+        {
+            var params = new URLSearchParams
+            (window.location.search);
+            var first_name = params.get('firstname');
+            var email = params.get('email');
+            var resultElement = document.getElementById('result');
+            resultElement.innerHTML = first_name + '<br>' + email ;
+        });
+    </script>
+</body>
+</html>
