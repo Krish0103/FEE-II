@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .student {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .student h2 {
+            margin: 0 0 10px 0;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        form input, form button {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <form id="student-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+        <input type="text" id="college" placeholder="College" required>
+        <input type="text" id="location" placeholder="Location" required>
+        <button type="submit">Add Student</button>
+    </form>
+    <div id="student-container"></div>
+
+    <script>
+        const displayStudentData = (student) => {
+            const studentDiv = document.createElement('div');
+            studentDiv.className = 'student';
+            studentDiv.innerHTML = `
+                <h2>${student.name}</h2>
+                <p><strong>Age:</strong> ${student.age}</p>
+                <p><strong>College:</strong> ${student.college}</p>
+                <p><strong>Location:</strong> ${student.location}</p>
+            `;
+
+            // Append the student div to the container
+            document.getElementById('student-container').appendChild(studentDiv);
+        };
+
+        // Handle form submission
+        document.getElementById('student-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const college = document.getElementById('college').value;
+            const location = document.getElementById('location').value;
+
+            // Create a new student object
+            const newStudent = { name, age, college, location };
+
+            // Display the new student's data
+            displayStudentData(newStudent);
+
+            // Clear the form
+            document.getElementById('student-form').reset();
+        });
+    </script>
+</body>
+</html>

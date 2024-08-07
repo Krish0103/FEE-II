@@ -1,32 +1,61 @@
-<!doctype>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>MY FIRST FEE-II CLASS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
-<body style = >
-    <h1>This is first line</h1><br>
-    This is <b> bold </b> line <br>
-    This is <i> italics </i> line<br>
-    Today is June 28<sup>th</sup>2024<br>
-    This is <small> small</small><br>
-    This is <u>underline</u><br>
-    This is <big>big</big>
-    This is short<cite> quote</cite><br>
-    <code> X=Y*m+2;</code><br>
-    <del>deleted</del> text<br>
-    <dfn> Internet is a network of networks</dfn><br>
-    This is <em> emphasised text</em><br>
-    This is a <var> variable</var><br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-        Non dolorum magnam explicabo quia commodi nulla minima nisi maiores molestias eos fugit, <br>
-        nam error ipsum voluptatibus omnis, sint facere, debitis deserunt.</p><br>
+<body>
+    <script>
+        // 1. To print 1 to 'n' numbers using while loop
+        let n = prompt("Enter a number");
+        let i = 1;
+        while (i <= n) {
+            console.log(i);
+            i++;
+        }
 
-    <img> <img src="207.jpg" alt = "Image not found">x`
+        // 2. To print a to z using do white loop
+        let letter = "a";
+        do {
+            console.log(letter);
+            letter = String.fromCharCode(letter.charCodeAt(0) + 1);
+    
+        } while (letter <= "z");
 
-    <img>
+        // 3. To print your name 'n' times using for loop
+        let name = prompt("Enter your name");
+        let times = prompt("Enter a number");
+        for (let i = 0; i < times; i++) {
+            console.log(name);
+        }
 
+        // 4. To print 1 to 100 numbers. But, skip what you entered 1 value.
+        let skip = prompt("Enter a number to skip");
+        for (let i = 1; i <= 100; i++) {
+            if (i != skip) {
+                console.log(i);
+            }
+        }
+
+        // 5. To print 1 to 100 numbers. But, skip what you entered 2 values.
+        let skip1 = prompt("Enter the first number to skip");
+        let skip2 = prompt("Enter the second number to skip");
+        for (let i = 1; i <= 100; i++) {
+            if (i != skip1 && i != skip2) {
+                console.log(i);
+            }
+        }
+
+        // 6. To Print Table following the order
+        let tableValue = prompt("Enter the table value");
+        let tableLength = prompt("Enter the table length");
+        for (let i = 1; i <= tableLength; i++) {
+            console.log(i + "*" + tableValue + "=" + i * tableValue);
+        }
+    </script>
 </body>
 
 </html>

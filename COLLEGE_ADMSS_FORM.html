@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+</head>
+<body>
+    <center><h2>College Admission Form</h2>
+    <form action="/submit_form" method="post">
+        <fieldset>
+            <legend align="center">Personal Information</legend>
+            
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="firstname" required><br><br>
+            
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lastname" required><br><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+            
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend align="center">Educational Information</legend>
+            
+            <label for="highschool">High School Name:</label>
+            <input type="text" id="highschool" name="highschool" required><br><br>
+            
+            <label for="hsgradyear">Year of Graduation:</label>
+            <input type="number" id="hsgradyear" name="hsgradyear" required><br><br>
+            
+            <label for="gpa">GPA:</label>
+            <input type="number" step="0.01" id="gpa" name="gpa" required><br><br>
+            
+            <label for="majors">Preferred Major:</label>
+            <select id="majors" name="majors" required>
+                <option value="computer_science">Computer Science</option>
+                <option value="engineering">Engineering</option>
+                <option value="business">Business</option>
+                <option value="arts">Arts</option>
+                <option value="sciences">Sciences</option>
+            </select><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend align="center">Additional Information</legend>
+            
+            <label for="extracurriculars">Extracurricular Activities:</label><br>
+            <textarea id="extracurriculars" name="extracurriculars" rows="4" cols="50" required></textarea><br><br>
+            
+            <label for="essay">Personal Essay:</label><br>
+            <textarea id="essay" name="essay" rows="10" cols="50" required></textarea><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit">
+    </form></center>
+</body>
+</html>

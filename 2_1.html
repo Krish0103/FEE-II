@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>     
+</head>
 <body>
     <div id="result"></div>
     <script>
@@ -15,8 +15,11 @@
             (window.location.search);
             var first_name = params.get('firstname');
             var email = params.get('email');
+            var password = params.get('password');
+            var address = params.get('address');
+            var week = params.get('week');
             var resultElement = document.getElementById('result');
-            resultElement.innerHTML = first_name + '<br>' + email ;
+            resultElement.innerHTML = first_name + '<br>' + email + '<br>' + password + '<br>' + address + '<br>' + week;
         });
     </script>
 </body>

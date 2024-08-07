@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function demo() {
+            document.write("Chitkara")
+        }
+        demo();
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+        let result = add(1, 5);
+        console.log("result" + result);
+        function favcolors(first, second) {
+            return first + " " + second;
+        }
+        let colors = favcolors("Red", "Black");
+        console.log(colors);
+        const frontend = ["angular", "react", "Vue JS"];
+        const backend = ["Node", "Java", "Spring Boot"];
+        //combine
+        //let skills = frontend.concat(backend);     old method 
+        let skills = [...frontend, ...backend];
+        console.log(skills);
+        function multiply(a = 7, b = 1) {
+            return a * b;
+        }
+        console.log(multiply(5, 2));
+        console.log(multiply(5));
+        console.log(multiply());
+
+        //WAP for pasing parameter in javascript, You should pass the following argument in your function.
+        //name, location , mobile number, college , dept, year
+        function printStudentInfo(name, location, mobileNumber, college, dept, year) {
+            return name+" "+location +" "+ mobileNumber +" "+ college +" "+ dept +" "+ year ;
+        }
+        console.log(printStudentInfo("Krish", "Rajpura", "9034179984", "ChitkaraUniversity", "BTECH", "2"))
+    </script>
+</body>
+
+</html>
